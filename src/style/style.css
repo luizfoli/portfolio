@@ -29,7 +29,7 @@ body {
 
     /* Clip-path, junto ao polygon, 
     responsável spor gerar formas geometricas. */
-    clip-path: polygon(0 0, 100% 0, 100% 60%, 0 100%)
+    clip-path: polygon(0 60%, 100% 0, 100% 50%, 0 90%)
 }
 
 .text-box {
