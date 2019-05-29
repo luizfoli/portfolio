@@ -25,7 +25,8 @@ body {
             to right bottom,
             #000,
             #071a26, 
-            #103b56);
+            /*#103b56*/
+            red);
     background-size: cover;
     background-position: top;
 
@@ -33,6 +34,7 @@ body {
     responsável spor gerar formas geometricas. */
     clip-path: polygon(0 0, 100% 0, 100% 70%, 0 90%)
 }
+
 
 .text-box {
     position: absolute;
@@ -51,7 +53,7 @@ body {
 .heading-primary-main {
     display: block;
     font-size: 60px;
-    font-weight: 700px;
+    font-weight: 500px;
     letter-spacing: 35px;
 
     animation: moveToLeft;
@@ -63,10 +65,42 @@ body {
     font-size: 20px;
     font-weight: 400px;
     letter-spacing: 20px;
-
     
     animation: moveToRight;
     animation-duration: 2s;
+}
+
+.about {
+    display: inline-block;
+    width: 100%;
+    height: 100vh;
+}
+
+.about h2 {
+    display: block;
+    text-align: center;
+    font-size: 60px;
+    font-weight: 300;
+    letter-spacing: 5px;
+}
+
+.about__social {
+    display: inline-block;
+    text-align: center;
+    width: 40%;
+}
+
+img {
+    width: 10rem;
+    border-radius:50px;
+}
+
+.about__description {
+    display: inline-block;
+    text-align: center;
+    background: #000;
+    width: 40%;
+    height: auto;
 }
 
 @keyframes moveToLeft {
