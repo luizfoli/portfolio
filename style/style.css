@@ -20,11 +20,10 @@ body {
 .header {
     height: 95vh;
     background-image:
-        url(../img/stars.png), 
-        linear-gradient(
-            to right bottom,
+        url(../img/stars.png),
+        linear-gradient(to right bottom,
             #000,
-            #071a26, 
+            #071a26,
             /*#103b56*/
             red);
     background-size: cover;
@@ -41,7 +40,7 @@ body {
     top: 40%;
     left: 50%;
 
-    transform: translate(-50%, -50%)
+    transform: translate(-45%, -50%)
 }
 
 .header-primary {
@@ -65,7 +64,7 @@ body {
     font-size: 20px;
     font-weight: 400px;
     letter-spacing: 20px;
-    
+
     animation: moveToRight;
     animation-duration: 2s;
 }
@@ -90,24 +89,52 @@ body {
     width: 40%;
 }
 
+.about__social my-icon:hover {
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 0 90%)
+}
+
 img {
-    width: 10rem;
-    border-radius:50px;
+    width: 18rem;
+    border-radius: 200px;
 }
 
 .about__description {
     display: inline-block;
+    position: absolute;
+    top: 130%;
+    left: 50%;
     text-align: center;
-    background: #000;
     width: 40%;
-    height: auto;
 }
+
+.about__description p {
+    text-align: center;
+}
+
+.social-media {
+}
+
+.social-media li {
+    list-style: none;
+    display: inline-block;
+    font-size: 35px;
+    margin-right: 5px;
+    border: 1px solid #fff;
+    transition: .5s;
+}
+
+.social-media li:hover {
+
+} 
+
+
 
 @keyframes moveToLeft {
     0% {
         transform: translateX(-100px)
     }
-    100%{
+
+    100% {
         transform: translateX(0)
     }
 }
@@ -116,7 +143,8 @@ img {
     0% {
         transform: translateX(100px)
     }
-    100%{
+
+    100% {
         transform: translateX(0)
     }
 }
