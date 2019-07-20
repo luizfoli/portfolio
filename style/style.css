@@ -13,7 +13,10 @@ body {
     font-size: 20px;
     font-weight: 400px;
     line-height: 1.7;
-    color: #777;
+    background-image: linear-gradient(
+        to left,
+        #0b131b, #34495e); 
+    color: #fff;
 }
 
 .about {
@@ -23,7 +26,8 @@ body {
     height: 100%;
 }
 
-.about h1, h2 {
+.about h1,
+h2 {
     display: block;
     text-align: center;
 }
@@ -32,7 +36,7 @@ body {
     font-size: 2em;
     font-weight: bold;
     letter-spacing: .1em;
-    color: #34495e;    
+    color: #fff;
 }
 
 .about h2 {
@@ -49,7 +53,6 @@ body {
 
 .about__social img {
     width: 12em;
-    /* border-radius: 20em; */
 }
 
 .about__description {
@@ -63,22 +66,50 @@ body {
     text-align: center;
 }
 
-.about__social-icons {
-    display: inline-block;
-    width: 100%;
-    text-align: center;
-    margin-top: 1em;
+ul {
+    width: 4em;
+    position: absolute;
+    overflow: hidden;
 }
 
-.about__social-icons img {
-    width: 2em;
-    margin-right: .5em;
-    opacity: 0.5;
-    transition: 0.5s;
+.leftside {
+    position: absolute;
+    top: 30%;
 }
 
-.about__social-icons img:hover {
-    width: 2.4em;
-    margin-right: .5em;
-    opacity: 1;
+.leftside li {
+    list-style-type: none;
+    padding: 15%;
+    transition: .3s;
+    color: #fff;
+    position: relative;
 }
+
+.leftside li a:link,
+.leftside li a:visited {
+    color: #fff;
+}
+
+.leftside li i {
+    font-size: 40px;
+}
+
+.leftside li:hover {
+    padding: 15% 40%;
+}
+
+.leftside li:nth-child(1) {
+    background: #007bb6;
+}
+
+.leftside li:nth-child(2) {
+    background: #3b5998;
+}
+
+.leftside li:nth-child(3) {
+    background: #4e545a;
+}
+
+/******************************
+My Projects 
+******************************/
