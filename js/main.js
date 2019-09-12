@@ -5,7 +5,7 @@
  */
 
 const mainTitle = document.querySelector('#mainTitle');
-mainTitle.textContent = "Hi, I'm Luiz Oliveira."
+mainTitle.textContent = "Hi, I'm Luiz Oliveira"
 
 const subTitle = document.querySelector('#subTitle');
 subTitle.textContent = 'Software Engineer | Fullstack Developer';
@@ -24,4 +24,22 @@ descAboutMe.map((desc) => {
     p.classList.add('desc-about-me');
     p.textContent = desc;
     descCointainer.appendChild(p);
+});
+
+const titleDinamic = document.querySelector('#titleDinamic');
+titleDinamic.textContent = 'My Projects';
+
+/**
+ * Medias sociais
+ */
+
+const urlGithub = 'https://github.com/luizfoli';
+const urlLinkedin = 'https://www.linkedin.com/in/luizfoli/';
+
+document.querySelector('#btnGithub').addEventListener('click',() => {
+    window.open(urlGithub, '_blank').focus();
+});
+
+document.querySelector('#btnLinkedin').addEventListener('click',() => {
+    window.open(urlLinkedin, '_blank').focus();
 });
