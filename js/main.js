@@ -36,10 +36,23 @@ titleDinamic.textContent = 'My Projects';
 const urlGithub = 'https://github.com/luizfoli';
 const urlLinkedin = 'https://www.linkedin.com/in/luizfoli/';
 
-document.querySelector('#btnGithub').addEventListener('click',() => {
+document.querySelector('#btnGithub').addEventListener('click', () => {
     window.open(urlGithub, '_blank').focus();
 });
 
-document.querySelector('#btnLinkedin').addEventListener('click',() => {
+document.querySelector('#btnLinkedin').addEventListener('click', () => {
     window.open(urlLinkedin, '_blank').focus();
 });
+
+/**
+ * Logica usada para geração dos projetos.
+ */
+
+const containerProjects = document.querySelector('#containerProjects');
+const myProjects = [];
+
+myProjects.map((project) => {
+    const newDivProject = document.createElement('div');
+    newDivProject.classList.add('project');
+    containerProjects.appendChild(newDivProject);
+})
