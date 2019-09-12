@@ -1,0 +1,90 @@
+.main-container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    overflow: hidden;
+}
+
+@media screen and (max-width: 800px) {
+    .main-container {
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(2, 50%);
+        overflow: hidden;
+    }
+}
+
+.main-container .article-fixed {
+    width: 100%;
+    padding: 2rem 0;
+    overflow: hidden;
+    background: #071a26;
+}
+
+.main-container .article-scroll {
+    width: 100%;
+    padding: 2rem;
+    background: #fff;
+    overflow: auto;
+}
+
+.container-about-me {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.container-about-me h1 {
+    font-size: 5rem;
+    font-weight: 100;
+}
+
+.container-about-me h2 {
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.my-icon {
+    width: 100%;
+    text-align: center;
+}
+
+.my-icon img {
+    width: 25rem;
+    border-radius: 20rem;
+}
+
+.container-desc {
+    width: 100%;
+    padding: 2rem;
+    font-size: 1.6rem;
+}
+
+.container-dinamic {
+    width: 100%;
+    height: 100%;
+    
+    color: #071a26;
+}
+
+.container-dinamic h1 {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.container-social-media {
+    font-size: 4rem;
+}
+
+.container-social-media a span {
+    margin: .5rem;
+    transition: .5s all ease-in-out;
+}
+
+.container-social-media a span:hover {
+    color: rgb(126, 126, 126);
+    cursor: pointer;
+}
