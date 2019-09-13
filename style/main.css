@@ -65,8 +65,23 @@
 .container-dinamic {
     width: 100%;
     height: 100%;
-    
     color: #071a26;
+}
+
+.container-dinamic header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+}
+
+.container-dinamic header span {
+    font-size: 2.5rem;
+}
+
+.container-dinamic header span:hover {
+    cursor: pointer;
 }
 
 .container-dinamic h1 {
