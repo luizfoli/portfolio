@@ -27,7 +27,7 @@ descAboutMe.map((desc) => {
 });
 
 const titleDinamic = document.querySelector('#titleDinamic');
-titleDinamic.textContent = 'My Projects';
+titleDinamic.textContent = 'My Projects on Github';
 
 /**
  * Medias sociais
@@ -36,10 +36,11 @@ titleDinamic.textContent = 'My Projects';
 const urlGithub = 'https://github.com/luizfoli';
 const urlLinkedin = 'https://www.linkedin.com/in/luizfoli/';
 
-document.querySelector('#btnGithub').addEventListener('click',() => {
+document.querySelector('#btnGithub').addEventListener('click', () => {
     window.open(urlGithub, '_blank').focus();
 });
 
-document.querySelector('#btnLinkedin').addEventListener('click',() => {
+document.querySelector('#btnLinkedin').addEventListener('click', () => {
     window.open(urlLinkedin, '_blank').focus();
 });
+

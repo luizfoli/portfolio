@@ -1,17 +1,34 @@
-/* #071a26 - #072526 */
-/* #103b56 - #0c4344 */
-
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     font-family: 'Lato', sans-serif;
     font-size: 10px;
     font-weight: 400px;
     line-height: 1.7;
     color: #fff;
+}
+
+::-webkit-scrollbar {
+    width: .5rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #fff;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #071a26;
+    transition: .5s all ease-in-out;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #174f72;
 }

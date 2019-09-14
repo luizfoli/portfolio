@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
     integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
+
   <link rel="stylesheet" href="style/global.css" />
   <link rel="stylesheet" href="style/main.css" />
 
@@ -43,12 +44,20 @@
     </article>
     <article class="article-scroll">
       <div class="container-dinamic">
-        <h1 id="titleDinamic"></h1>
+        <header>
+          <h1 id="titleDinamic"></h1>
+          <span>
+            <i class="fa fa-bars" aria-hidden="true"></i>
+          </span>
+        </header>
+        <div id="containerProjects" class="container-projects">
+        </div>
       </div>
     </article>
   </main>
 
   <script src="./js/main.js"></script>
+  <script src="./js/api-github.js"></script>
 </body>
 
 </html>
