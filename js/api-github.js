@@ -6,6 +6,14 @@ async function constructMyProjectsView() {
     repos.map((repo) => createDivProject(repo, containerProjects));
 }
 
+async function getRepos() {
+    const repos = await fetch('https://api.github.com/users/luizfoli/repos')
+        .then((resp) => resp.json());
+
+    // Filtragem para mostrar apenas os meus projetos.
+    return repos.filter((repo) => (!repo.fork));
+}
+
 function createDivProject(repo, containerProjects) {
 
     const newDivProject = document.createElement('div');
@@ -19,7 +27,10 @@ function createDivProject(repo, containerProjects) {
 
 function createHeader(repo) {
 
-    const { name, html_url } = repo;
+    const {
+        name,
+        html_url
+    } = repo;
 
     const newHeader = document.createElement('header');
     const newLinkHeader = document.createElement('a');
@@ -35,7 +46,10 @@ function createHeader(repo) {
 
 function createArticle(repo) {
 
-    const { description, language } = repo;
+    const {
+        description,
+        language
+    } = repo;
 
     const newArticle = document.createElement('article');
     const repoDescription = document.createElement('p');
@@ -47,14 +61,6 @@ function createArticle(repo) {
     newArticle.appendChild(repoLanguage);
 
     return newArticle;
-}
-
-async function getRepos() {
-    const repos = await fetch('https://api.github.com/users/luizfoli/repos')
-        .then((resp) => resp.json());
-
-    // Filtragem para mostrar apenas os meus projetos.
-    return repos.filter((repo) => (!repo.fork));
 }
 
 constructMyProjectsView();
