@@ -1,37 +1,52 @@
-async function createDivProject() {
+async function constructMyProjectsView() {
+
     const repos = await getRepos();
     const containerProjects = document.querySelector('#containerProjects');
 
-    repos.map((repo) => {
+    repos.map((repo) => createDivProject(repo, containerProjects));
+}
 
-        const { name, html_url, description, language } = repo;
+function createDivProject(repo, containerProjects) {
 
-        const newDivProject = document.createElement('div');
-        const newHeader = document.createElement('header');
-        const newLinkHeader = document.createElement('a');
-        const newArticle = document.createElement('article');
+    const newDivProject = document.createElement('div');
 
-        const repoDescription = document.createElement('p');
-        repoDescription.textContent = description;
+    newDivProject.appendChild(createHeader(repo));
+    newDivProject.appendChild(createArticle(repo));
 
-        const repoLanguage = document.createElement('p');
-        repoLanguage.textContent = language;
+    newDivProject.classList.add('project');
+    containerProjects.appendChild(newDivProject);
+}
 
-        newArticle.appendChild(repoDescription);
-        newArticle.appendChild(repoLanguage);
+function createHeader(repo) {
 
-        newLinkHeader.textContent = name;
-        newLinkHeader.target = '_blank';
-        newLinkHeader.href = html_url;
+    const { name, html_url } = repo;
 
-        newHeader.appendChild(newLinkHeader);
-        newDivProject.appendChild(newHeader);
-        newDivProject.appendChild(newArticle);
+    const newHeader = document.createElement('header');
+    const newLinkHeader = document.createElement('a');
 
+    newLinkHeader.textContent = name;
+    newLinkHeader.target = '_blank';
+    newLinkHeader.href = html_url;
 
-        newDivProject.classList.add('project');
-        containerProjects.appendChild(newDivProject);
-    })
+    newHeader.appendChild(newLinkHeader);
+    return newHeader;
+
+}
+
+function createArticle(repo) {
+
+    const { description, language } = repo;
+
+    const newArticle = document.createElement('article');
+    const repoDescription = document.createElement('p');
+    repoDescription.textContent = description;
+    const repoLanguage = document.createElement('p');
+    repoLanguage.textContent = language;
+
+    newArticle.appendChild(repoDescription);
+    newArticle.appendChild(repoLanguage);
+
+    return newArticle;
 }
 
 async function getRepos() {
@@ -42,4 +57,4 @@ async function getRepos() {
     return repos.filter((repo) => (!repo.fork));
 }
 
-createDivProject();
+constructMyProjectsView();
