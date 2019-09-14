@@ -44,15 +44,3 @@ document.querySelector('#btnLinkedin').addEventListener('click', () => {
     window.open(urlLinkedin, '_blank').focus();
 });
 
-/**
- * Logica usada para geração dos projetos.
- */
-
-const containerProjects = document.querySelector('#containerProjects');
-const myProjects = [];
-
-myProjects.map((project) => {
-    const newDivProject = document.createElement('div');
-    newDivProject.classList.add('project');
-    containerProjects.appendChild(newDivProject);
-})
