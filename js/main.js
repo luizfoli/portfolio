@@ -27,7 +27,7 @@ descAboutMe.map((desc) => {
 });
 
 const titleDinamic = document.querySelector('#titleDinamic');
-titleDinamic.textContent = 'My Projects';
+titleDinamic.textContent = 'My Projects on Github';
 
 /**
  * Medias sociais
