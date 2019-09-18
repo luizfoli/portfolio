@@ -6,17 +6,6 @@
     overflow: hidden;
 }
 
-@media screen and (max-width: 800px) {
-    .main-container {
-        width: 100vw;
-        height: 100vh;
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: repeat(2, 50%);
-        overflow: hidden;
-    }
-}
-
 .main-container .article-fixed {
     width: 100%;
     background: #071a26;
@@ -131,7 +120,8 @@
 .container-projects .project header a {
     font-size: 1.6rem;
     font-weight: 600;
-    color: #0366d6 /* githug */
+    color: #0366d6
+        /* githug */
 }
 
 .container-projects .project article {
@@ -139,8 +129,24 @@
     height: 100%;
     color: #586069;
     font-size: 1.4rem;
+    padding: 0 2rem;
 }
 
-.container-projects .project article p {
-    padding: 0 2rem;
+
+/*
+    Media Queries
+*/
+
+@media screen and (max-width: 800px) {
+    
+    .main-container {
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(2, 100%);
+        overflow: hidden;
+    }
+
+    
 }
