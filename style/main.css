@@ -138,15 +138,20 @@
 */
 
 @media screen and (max-width: 800px) {
-    
+
     .main-container {
         width: 100vw;
         height: 100vh;
         display: grid;
         grid-template-columns: 100%;
         grid-template-rows: repeat(2, 100%);
-        overflow: hidden;
+        overflow: auto;
     }
 
-    
+    .main-container .article-fixed {
+        width: 100%;
+        background: #071a26;
+        overflow: auto;
+    }
+
 }
