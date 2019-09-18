@@ -6,17 +6,6 @@
     overflow: hidden;
 }
 
-@media screen and (max-width: 800px) {
-    .main-container {
-        width: 100vw;
-        height: 100vh;
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: repeat(2, 50%);
-        overflow: hidden;
-    }
-}
-
 .main-container .article-fixed {
     width: 100%;
     background: #071a26;
@@ -141,4 +130,20 @@
     color: #586069;
     font-size: 1.4rem;
     padding: 0 2rem;
+}
+
+
+/*
+    Media Queries
+*/
+
+@media screen and (max-width: 800px) {
+    .main-container {
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(2, 100%);
+        overflow: hidden;
+    }
 }
