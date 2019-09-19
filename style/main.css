@@ -6,16 +6,16 @@
     overflow: hidden;
 }
 
-.main-container .article-fixed {
+.main-container .left-article {
     width: 100%;
+    height: 100%;
     background: #071a26;
 }
 
-.main-container .article-scroll {
+.main-container .right-article {
     width: 100%;
-    padding: 2rem;
+    height: 100%;
     background: #fff;
-    overflow: auto;
 }
 
 .container-about-me {
@@ -57,7 +57,13 @@
     color: #071a26;
 }
 
-.container-dinamic header {
+.container-dinamic__header {
+    background: #fff;
+}
+
+.container-dinamic__header header {
+    width: 100%;
+    height: 30%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -93,10 +99,13 @@
 }
 
 .container-projects {
+    width: 100%;
+    height: 70%;
     display: flex;
     flex-direction: column;
     align-content: center;
     margin: 1rem 0;
+    overflow: auto;
 }
 
 .container-projects .project {
@@ -148,7 +157,7 @@
         overflow: auto;
     }
 
-    .main-container .article-fixed {
+    .main-container .left-article {
         width: 100%;
         background: #071a26;
         overflow: auto;
