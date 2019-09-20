@@ -26,12 +26,12 @@
 }
 
 .container-about-me h1 {
-    font-size: 5rem;
+    font-size: 4rem;
     font-weight: 100;
 }
 
 .container-about-me h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 300;
 }
 
@@ -102,7 +102,7 @@
 
 .container-projects {
     width: 100%;
-    height: 70%;
+    height: 90%;
     display: flex;
     flex-direction: column;
     align-content: center;
