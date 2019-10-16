@@ -38,6 +38,7 @@ function createHeader(repo) {
     newLinkHeader.textContent = name;
     newLinkHeader.target = '_blank';
     newLinkHeader.href = html_url;
+    newLinkHeader.rel = 'noopener';
 
     newHeader.appendChild(newLinkHeader);
     return newHeader;
